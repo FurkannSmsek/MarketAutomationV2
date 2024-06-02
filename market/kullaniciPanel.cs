@@ -76,7 +76,27 @@ namespace market
 
         private void btn_kayitGuncelle_Click(object sender, EventArgs e)
         {
+            User user = new User();
+            user.id = int.Parse(txt_id.Text);
+            user.kullaniciAdi = txt_kullaniciAdi.Text;
+            user.sifre = txt_sifre.Text;
+            user.yetki = combo_yetki.SelectedItem.ToString();
+            user.emailAdres = txt_emailAdres.Text;
+            user.guvenlikSorusu = combo_guvenlikSorusu.SelectedItem.ToString();
+            user.guvenlikCevabi = combo_guvenlikCevabi.Text;
+            
+           LoginStatus sonuc = controller.kullaniciGuncelle(user);
 
+            if (sonuc == LoginStatus.basarili)
+            {
+                MessageBox.Show("Kayıt Güncellendi: ", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView1.DataSource = controller.tumKullanicilariGetir();
+            }
+            else
+            {
+                MessageBox.Show("Kayıt Güncellenemedi! ", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void btn_kayitEkle_Click(object sender, EventArgs e)
@@ -171,6 +191,17 @@ namespace market
         private void lbl_kullaniciAdi_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_kullaniciAdi.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_sifre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txt_emailAdres.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            combo_guvenlikCevabi.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            combo_yetki.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            combo_guvenlikSorusu.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+  
         }
     }
 }

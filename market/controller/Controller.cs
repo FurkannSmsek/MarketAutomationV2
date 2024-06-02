@@ -127,5 +127,9 @@ namespace market.controller
             }
         }
 
+        public LoginStatus kullaniciGuncelle(User user)
+        {
+            return repository.kullaniciGuncelle(user);
+        }
     }
 }

@@ -46,6 +46,8 @@ namespace market
             this.label1 = new System.Windows.Forms.Label();
             this.txt_kullaniciAdi = new System.Windows.Forms.TextBox();
             this.lbl_kullaniciAdi = new System.Windows.Forms.Label();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.lbl_id = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -55,12 +57,16 @@ namespace market
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(635, 170);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_id);
+            this.groupBox1.Controls.Add(this.lbl_id);
             this.groupBox1.Controls.Add(this.btn_kayitSil);
             this.groupBox1.Controls.Add(this.btn_kayitGuncelle);
             this.groupBox1.Controls.Add(this.btn_kayitEkle);
@@ -120,7 +126,7 @@ namespace market
             // combo_guvenlikSorusu
             // 
             this.combo_guvenlikSorusu.FormattingEnabled = true;
-            this.combo_guvenlikSorusu.Location = new System.Drawing.Point(386, 47);
+            this.combo_guvenlikSorusu.Location = new System.Drawing.Point(388, 72);
             this.combo_guvenlikSorusu.Name = "combo_guvenlikSorusu";
             this.combo_guvenlikSorusu.Size = new System.Drawing.Size(140, 21);
             this.combo_guvenlikSorusu.TabIndex = 14;
@@ -128,7 +134,7 @@ namespace market
             // 
             // combo_guvenlikCevabi
             // 
-            this.combo_guvenlikCevabi.Location = new System.Drawing.Point(385, 73);
+            this.combo_guvenlikCevabi.Location = new System.Drawing.Point(387, 98);
             this.combo_guvenlikCevabi.Name = "combo_guvenlikCevabi";
             this.combo_guvenlikCevabi.Size = new System.Drawing.Size(141, 20);
             this.combo_guvenlikCevabi.TabIndex = 13;
@@ -138,7 +144,7 @@ namespace market
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(256, 74);
+            this.label6.Location = new System.Drawing.Point(258, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 15);
             this.label6.TabIndex = 12;
@@ -149,7 +155,7 @@ namespace market
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(256, 47);
+            this.label5.Location = new System.Drawing.Point(258, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 15);
             this.label5.TabIndex = 10;
@@ -158,7 +164,7 @@ namespace market
             // 
             // txt_emailAdres
             // 
-            this.txt_emailAdres.Location = new System.Drawing.Point(385, 20);
+            this.txt_emailAdres.Location = new System.Drawing.Point(387, 45);
             this.txt_emailAdres.Name = "txt_emailAdres";
             this.txt_emailAdres.Size = new System.Drawing.Size(141, 20);
             this.txt_emailAdres.TabIndex = 9;
@@ -168,7 +174,7 @@ namespace market
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(256, 21);
+            this.label4.Location = new System.Drawing.Point(258, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 15);
             this.label4.TabIndex = 8;
@@ -178,7 +184,7 @@ namespace market
             // combo_yetki
             // 
             this.combo_yetki.FormattingEnabled = true;
-            this.combo_yetki.Location = new System.Drawing.Point(105, 72);
+            this.combo_yetki.Location = new System.Drawing.Point(107, 97);
             this.combo_yetki.Name = "combo_yetki";
             this.combo_yetki.Size = new System.Drawing.Size(140, 21);
             this.combo_yetki.TabIndex = 5;
@@ -188,7 +194,7 @@ namespace market
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(7, 72);
+            this.label2.Location = new System.Drawing.Point(9, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 4;
@@ -197,7 +203,7 @@ namespace market
             // 
             // txt_sifre
             // 
-            this.txt_sifre.Location = new System.Drawing.Point(104, 45);
+            this.txt_sifre.Location = new System.Drawing.Point(106, 70);
             this.txt_sifre.Name = "txt_sifre";
             this.txt_sifre.Size = new System.Drawing.Size(141, 20);
             this.txt_sifre.TabIndex = 3;
@@ -207,7 +213,7 @@ namespace market
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(7, 46);
+            this.label1.Location = new System.Drawing.Point(9, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 2;
@@ -216,7 +222,7 @@ namespace market
             // 
             // txt_kullaniciAdi
             // 
-            this.txt_kullaniciAdi.Location = new System.Drawing.Point(104, 19);
+            this.txt_kullaniciAdi.Location = new System.Drawing.Point(106, 44);
             this.txt_kullaniciAdi.Name = "txt_kullaniciAdi";
             this.txt_kullaniciAdi.Size = new System.Drawing.Size(141, 20);
             this.txt_kullaniciAdi.TabIndex = 1;
@@ -226,12 +232,29 @@ namespace market
             // 
             this.lbl_kullaniciAdi.AutoSize = true;
             this.lbl_kullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_kullaniciAdi.Location = new System.Drawing.Point(7, 20);
+            this.lbl_kullaniciAdi.Location = new System.Drawing.Point(9, 45);
             this.lbl_kullaniciAdi.Name = "lbl_kullaniciAdi";
             this.lbl_kullaniciAdi.Size = new System.Drawing.Size(91, 15);
             this.lbl_kullaniciAdi.TabIndex = 0;
             this.lbl_kullaniciAdi.Text = "Kullanıcı Adı:";
             this.lbl_kullaniciAdi.Click += new System.EventHandler(this.lbl_kullaniciAdi_Click);
+            // 
+            // txt_id
+            // 
+            this.txt_id.Location = new System.Drawing.Point(106, 18);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(141, 20);
+            this.txt_id.TabIndex = 19;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_id.Location = new System.Drawing.Point(9, 19);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(25, 15);
+            this.lbl_id.TabIndex = 18;
+            this.lbl_id.Text = "ID:";
             // 
             // kullaniciPanel
             // 
@@ -269,5 +292,7 @@ namespace market
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_kullaniciAdi;
         private System.Windows.Forms.Label lbl_kullaniciAdi;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.Label lbl_id;
     }
 }

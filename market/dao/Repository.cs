@@ -292,5 +292,32 @@ namespace market.dao
             con.Close();
 
         }
+   
+        public LoginStatus kullaniciGuncelle(User user)
+        {
+            con.Open();
+            cmd = new SqlCommand("sp_kullaniciGuncelle", con);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", user.id);
+            cmd.Parameters.AddWithValue("@kullaniciAdi", user.kullaniciAdi);
+            cmd.Parameters.AddWithValue("@sifre", user.id);
+            cmd.Parameters.AddWithValue("@id", user.sifre);
+            cmd.Parameters.AddWithValue("@yetki", user.yetki);
+            cmd.Parameters.AddWithValue("@emailAdres", user.emailAdres);
+            cmd.Parameters.AddWithValue("@guvenlikSorusu", user.guvenlikSorusu);
+            cmd.Parameters.AddWithValue("@guvenlikCevabi", user.guvenlikCevabi);
+            int returnvalue = cmd.ExecuteNonQuery();
+            con.Close();
+            if (returnvalue == 1)
+            {
+                return LoginStatus.basarili;
+            }
+            else
+            {
+                return LoginStatus.basarisiz;
+            }
+
+        }
     }
+
 }
