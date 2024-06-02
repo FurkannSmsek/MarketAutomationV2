@@ -300,8 +300,7 @@ namespace market.dao
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@id", user.id);
             cmd.Parameters.AddWithValue("@kullaniciAdi", user.kullaniciAdi);
-            cmd.Parameters.AddWithValue("@sifre", user.id);
-            cmd.Parameters.AddWithValue("@id", user.sifre);
+            cmd.Parameters.AddWithValue("@sifre", user.sifre);
             cmd.Parameters.AddWithValue("@yetki", user.yetki);
             cmd.Parameters.AddWithValue("@emailAdres", user.emailAdres);
             cmd.Parameters.AddWithValue("@guvenlikSorusu", user.guvenlikSorusu);

@@ -196,6 +196,7 @@ namespace market
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_kullaniciAdi.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txt_sifre.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txt_emailAdres.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             combo_guvenlikCevabi.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
