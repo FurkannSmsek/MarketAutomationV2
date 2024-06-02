@@ -317,6 +317,27 @@ namespace market.dao
             }
 
         }
+    
+        public LoginStatus kullaniciSil(int id)
+        {
+            con.Open();
+
+            cmd = new SqlCommand("delete from loginTable where id=@id", con);
+            cmd.Parameters.AddWithValue("@id", id);
+            int returnvalue = cmd.ExecuteNonQuery();
+            con.Close();
+
+            if (returnvalue == 1)
+            {
+                return LoginStatus.basarili;
+            }
+            else
+            {
+                return LoginStatus.basarisiz;
+            }
+
+        }
+    
     }
 
 }

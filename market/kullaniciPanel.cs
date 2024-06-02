@@ -71,6 +71,29 @@ namespace market
 
         private void btn_kayitSil_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(txt_id.Text))
+            {
+                LoginStatus sonuc = controller.kullaniciSil(int.Parse(txt_id.Text));
+
+                if (sonuc == LoginStatus.basarili)
+                {
+                    MessageBox.Show("Kayıt Silindi ", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = controller.tumKullanicilariGetir();
+                }
+                else if (sonuc == LoginStatus.basarisiz)
+                {
+                    MessageBox.Show("Kayıt Silinemedi! ", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("Silmek istediğiniz kayıtın id değerini giriniz! ", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silmek istediğiniz kayıtın id değerini giriniz! ", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
@@ -203,6 +226,13 @@ namespace market
             combo_yetki.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             combo_guvenlikSorusu.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
   
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminPanel adm = new AdminPanel();
+            adm.Show();
+            this.Hide();
         }
     }
 }

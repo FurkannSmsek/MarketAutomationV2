@@ -131,5 +131,18 @@ namespace market.controller
         {
             return repository.kullaniciGuncelle(user);
         }
+
+        public LoginStatus kullaniciSil(int id)
+        {
+            if (!string.IsNullOrEmpty(id.ToString())){
+                return repository.kullaniciSil(id);
+            }
+            else
+            {
+                return LoginStatus.eksikParametre;
+            }
+        }
+
+
     }
 }
