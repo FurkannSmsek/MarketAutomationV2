@@ -112,6 +112,20 @@ namespace market.controller
             return repository.tumKullanicilariGetir();
         }
 
+        public LoginStatus kullaniciEkle(User user)
+        {
+            if(!string.IsNullOrEmpty(user.kullaniciAdi)&& !string.IsNullOrEmpty(user.sifre)&& !string.IsNullOrEmpty(user.yetki)&& !string.IsNullOrEmpty(user.emailAdres)&& !string.IsNullOrEmpty(user.guvenlikSorusu)&& !string.IsNullOrEmpty(user.guvenlikCevabi))
+            {
+                Controller controller = new Controller();
+                LoginStatus sonuc = repository.kullaniciEkle(user);
+                return sonuc;
+
+            }
+            else
+            {
+                return LoginStatus.eksikParametre;
+            }
+        }
 
     }
 }

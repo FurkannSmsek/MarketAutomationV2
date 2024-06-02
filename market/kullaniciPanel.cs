@@ -1,4 +1,6 @@
 
+using market.controller;
+using market.enumaration;
 using market.model;
 using System;
 using System.Collections.Generic;
@@ -14,7 +16,7 @@ namespace market
 {
     public partial class kullaniciPanel : Form
     {
-        controller.Controller controller = new controller.Controller();
+        Controller controller = new Controller();
         public kullaniciPanel()
         {
             InitializeComponent();
@@ -42,17 +44,7 @@ namespace market
             combo_yetki.Items.Add("Kasiyer");
             combo_yetki.SelectedIndex = 0;
 
-            combo_bolge.Items.Add("Adalar");
-            combo_bolge.Items.Add("Arnavutköy");
-            combo_bolge.Items.Add("Ataşehir");
-            combo_bolge.Items.Add("Avcilar");
-            combo_bolge.Items.Add("Bağcılar");
-            combo_bolge.Items.Add("Bakırköy");
-            combo_bolge.Items.Add("Beyoğlu");
-            combo_bolge.Items.Add("Çatalca");
-            combo_bolge.Items.Add("Çekmeköy");
-            combo_bolge.Items.Add("Sancaktepe");
-            combo_bolge.SelectedIndex = 0;
+           
 
             combo_guvenlikSorusu.Items.Add("En Sevdiğiniz Hayvan");
             combo_guvenlikSorusu.Items.Add("En Sevdiğiniz Araba? ");
@@ -89,7 +81,26 @@ namespace market
 
         private void btn_kayitEkle_Click(object sender, EventArgs e)
         {
+            User user = new User();
+            user.kullaniciAdi = txt_kullaniciAdi.Text;
+            user.sifre = txt_sifre.Text;
+            user.yetki = combo_yetki.SelectedItem.ToString();
+            user.emailAdres = txt_emailAdres.Text;
+            user.guvenlikSorusu = combo_guvenlikSorusu.SelectedItem.ToString();
+            user.guvenlikCevabi = combo_guvenlikCevabi.Text;
 
+            LoginStatus sonuc = controller.kullaniciEkle(user);
+
+            if(sonuc == LoginStatus.basarili)
+            {
+                MessageBox.Show("Kayıt EKlendi: ", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView1.DataSource = controller.tumKullanicilariGetir();
+            }
+            else
+            {
+                MessageBox.Show("Gerekli Alanları Doldurunuz! ", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void combo_bolge_SelectedIndexChanged(object sender, EventArgs e)
