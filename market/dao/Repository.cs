@@ -230,33 +230,41 @@ namespace market.dao
             }
             return LoginStatus.basarisiz;
         }
-   
+
         //-------------------------------------------------
         public List<User> tumKullanicilariGetir()
         {
             List<User> userList = new List<User>();
-            con.Open();
 
-            cmd = new SqlCommand("select * from loginTable", con);
-            dr = cmd.ExecuteReader();
-
-            while (dr.Read())
+            // using bloğu bağlantıyı otomatik olarak yönetir
+            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-C1C9D4M\\SQLEXPRESS;Initial Catalog=market2;User ID=furkan;password=1;"))
             {
-                User user = new User();
-                user.id =int.Parse(dr["id"].ToString());
-                user.kullaniciAdi = dr["kullaniciAdi"].ToString();
-                user.sifre = dr["sifre"].ToString();
-                user.yetki = dr["yetki"].ToString();
-                user.bolge = dr["bolge"].ToString();
-                user.emailAdres = dr["emailAdres"].ToString();
-                user.guvenlikSorusu = dr["guvenlikSorusu"].ToString();
-                user.guvenlikCevabi = dr["guvenlikCevabi"].ToString();
-                userList.Add(user);
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand("select * from loginTable", con))
+                {
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            User user = new User();
+                            user.id = int.Parse(dr["id"].ToString());
+                            user.kullaniciAdi = dr["kullaniciAdi"].ToString();
+                            user.sifre = dr["sifre"].ToString();
+                            user.yetki = dr["yetki"].ToString();
+                            //user.bolge = dr["bolge"].ToString();
+                            user.emailAdres = dr["emailAdres"].ToString();
+                            user.guvenlikSorusu = dr["guvenlikSorusu"].ToString();
+                            user.guvenlikCevabi = dr["guvenlikCevabi"].ToString();
+                            userList.Add(user);
+                        }
+                    }
+                }
             }
-            con.Close();
+
             return userList;
         }
-        
+
         public LoginStatus kullaniciEkle(User user)
         {
             con.Open();
