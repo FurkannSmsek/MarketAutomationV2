@@ -174,7 +174,9 @@ namespace market
 
         private void btn_et_Click(object sender, EventArgs e)
         {
-
+            EtUrunlerPanel et = new EtUrunlerPanel();
+            et.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

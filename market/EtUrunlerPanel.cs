@@ -11,23 +11,25 @@ using System.Windows.Forms;
 using ZXing;
 using market.model;
 using System.Media;
+
 namespace market
 {
-    public partial class SutUrunlerPanel : Form
+    public partial class EtUrunlerPanel : Form
     {
         int sayi1;
         int sayi2;
-        int islemTip; 
+        int islemTip;
 
-        public SutUrunlerPanel()
+        public EtUrunlerPanel()
         {
             InitializeComponent();
             txt_islem.Text = "0";
         }
+
         FilterInfoCollection fic;
         VideoCaptureDevice vcd;
 
-        private void SutUrunlerPanel_Load(object sender, EventArgs e)
+        private void EtUrunlerPanel_Load(object sender, EventArgs e)
         {
             fic = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo camera in fic)
@@ -52,7 +54,7 @@ namespace market
 
         private void btn_sonuc_Click(object sender, EventArgs e)
         {
-            if (islemTip == 1)
+            if(islemTip == 1)
             {
                 sayi2 = int.Parse(txt_islem.Text);
                 txt_islem.Text = (sayi1 + sayi2).ToString();
@@ -73,13 +75,6 @@ namespace market
                 txt_islem.Text = (sayi1 / sayi2).ToString();
             }
         }
-
-        private void grp_hesapmakinesi_Enter(object sender, EventArgs e)
-        {
-
-        }
-     
-        private readonly object result;
 
         private void secilenTus(object sender, EventArgs e)
         {
@@ -178,6 +173,13 @@ namespace market
             this.Hide();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SutUrunlerPanel sut = new SutUrunlerPanel();
+            sut.Show();
+            this.Hide();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             MeyveSebzePanel meyve = new MeyveSebzePanel();
@@ -192,13 +194,9 @@ namespace market
             this.Hide();
         }
 
-        private void btn_et_Click(object sender, EventArgs e)
+        private void lbl_urunisim_Click(object sender, EventArgs e)
         {
-            EtUrunlerPanel et = new EtUrunlerPanel();
-            et.Show();
-            this.Hide();
+
         }
     }
-    }
-    
-
+}

@@ -208,5 +208,12 @@ namespace market
             baklagil.Show();
             this.Hide();
         }
+
+        private void btn_et_Click(object sender, EventArgs e)
+        {
+            EtUrunlerPanel et = new EtUrunlerPanel();
+            et.Show();
+            this.Hide();
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace market
             //Application.Run(new MeyveSebzePanel());
             //Application.Run(new SutUrunlerPanel());
             //Application.Run(new BaklagilPanel());
+            //Application.Run(new EtUrunlerPanel());
         }
 
     }

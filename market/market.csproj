@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>market</RootNamespace>
     <AssemblyName>market</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -98,6 +98,12 @@
     <Compile Include="controller\list.cs" />
     <Compile Include="dao\Repository.cs" />
     <Compile Include="enumaration\LoginStatus.cs" />
+    <Compile Include="EtUrunlerPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EtUrunlerPanel.Designer.cs">
+      <DependentUpon>EtUrunlerPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaklagilPanel.resx">
       <DependentUpon>BaklagilPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtUrunlerPanel.resx">
+      <DependentUpon>EtUrunlerPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

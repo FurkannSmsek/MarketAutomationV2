@@ -52,6 +52,7 @@
             this.btn_et.Size = new System.Drawing.Size(160, 152);
             this.btn_et.TabIndex = 0;
             this.btn_et.UseVisualStyleBackColor = true;
+            this.btn_et.Click += new System.EventHandler(this.btn_et_Click);
             // 
             // ımageList1
             // 
@@ -82,6 +83,7 @@
             this.btn_legume.Size = new System.Drawing.Size(160, 152);
             this.btn_legume.TabIndex = 2;
             this.btn_legume.UseVisualStyleBackColor = true;
+            this.btn_legume.Click += new System.EventHandler(this.btn_legume_Click);
             // 
             // btn_fruit
             // 
@@ -154,7 +156,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "KasiyerPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "1";
+            this.Text = "Kasiyer Panel";
             this.Load += new System.EventHandler(this.KasiyerPanel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

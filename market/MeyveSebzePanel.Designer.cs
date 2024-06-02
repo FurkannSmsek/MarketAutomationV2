@@ -173,6 +173,7 @@
             this.btn_et.Size = new System.Drawing.Size(114, 75);
             this.btn_et.TabIndex = 0;
             this.btn_et.UseVisualStyleBackColor = true;
+            this.btn_et.Click += new System.EventHandler(this.btn_et_Click);
             // 
             // grp_hesapmakinesi
             // 

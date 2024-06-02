@@ -1,6 +1,6 @@
 ﻿namespace market
 {
-    partial class SutUrunlerPanel
+    partial class EtUrunlerPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SutUrunlerPanel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EtUrunlerPanel));
             this.grp_menu = new System.Windows.Forms.GroupBox();
             this.grp_urunler = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,6 +52,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_et = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_kameraKapat = new System.Windows.Forms.Button();
+            this.btn_kameraAc = new System.Windows.Forms.Button();
+            this.lbl_urunisim = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmb_kameraac = new System.Windows.Forms.ComboBox();
+            this.pctbox_Kamera = new System.Windows.Forms.PictureBox();
             this.grp_hesapmakinesi = new System.Windows.Forms.GroupBox();
             this.btn_geriGel = new System.Windows.Forms.Button();
             this.btn_sekiz = new System.Windows.Forms.Button();
@@ -77,28 +87,24 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btn_sut = new System.Windows.Forms.Button();
-            this.SutList = new System.Windows.Forms.ImageList(this.components);
-            this.btn_peynir = new System.Windows.Forms.Button();
-            this.btn_tereyag = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_kameraKapat = new System.Windows.Forms.Button();
-            this.btn_kameraAc = new System.Windows.Forms.Button();
-            this.lbl_urunisim = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cmb_kameraac = new System.Windows.Forms.ComboBox();
-            this.pctbox_Kamera = new System.Windows.Forms.PictureBox();
+            this.btn_misir = new System.Windows.Forms.Button();
+            this.btn_bezelye = new System.Windows.Forms.Button();
+            this.btn_mercimek = new System.Windows.Forms.Button();
+            this.btn_fasulye = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.EtList = new System.Windows.Forms.ImageList(this.components);
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.grp_menu.SuspendLayout();
             this.grp_urunler.SuspendLayout();
-            this.grp_hesapmakinesi.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctbox_Kamera)).BeginInit();
+            this.grp_hesapmakinesi.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grp_menu
@@ -109,10 +115,10 @@
             this.grp_menu.Controls.Add(this.button2);
             this.grp_menu.Controls.Add(this.button1);
             this.grp_menu.Controls.Add(this.btn_et);
-            this.grp_menu.Location = new System.Drawing.Point(12, 43);
+            this.grp_menu.Location = new System.Drawing.Point(12, 12);
             this.grp_menu.Name = "grp_menu";
             this.grp_menu.Size = new System.Drawing.Size(137, 477);
-            this.grp_menu.TabIndex = 1;
+            this.grp_menu.TabIndex = 3;
             this.grp_menu.TabStop = false;
             this.grp_menu.Text = "Menu";
             // 
@@ -288,9 +294,9 @@
             // 
             // btn_geri
             // 
-            this.btn_geri.Location = new System.Drawing.Point(6, 391);
+            this.btn_geri.Location = new System.Drawing.Point(6, 440);
             this.btn_geri.Name = "btn_geri";
-            this.btn_geri.Size = new System.Drawing.Size(125, 33);
+            this.btn_geri.Size = new System.Drawing.Size(125, 31);
             this.btn_geri.TabIndex = 5;
             this.btn_geri.Text = "Çıkış";
             this.btn_geri.UseVisualStyleBackColor = true;
@@ -339,6 +345,7 @@
             this.button1.Size = new System.Drawing.Size(114, 75);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_et
             // 
@@ -350,7 +357,107 @@
             this.btn_et.Size = new System.Drawing.Size(114, 75);
             this.btn_et.TabIndex = 0;
             this.btn_et.UseVisualStyleBackColor = true;
-            this.btn_et.Click += new System.EventHandler(this.btn_et_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.btn_kameraKapat);
+            this.groupBox2.Controls.Add(this.btn_kameraAc);
+            this.groupBox2.Controls.Add(this.lbl_urunisim);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.cmb_kameraac);
+            this.groupBox2.Location = new System.Drawing.Point(161, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(371, 152);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "QR kod ile barkod okut";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(240, 108);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(123, 22);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btn_kameraKapat
+            // 
+            this.btn_kameraKapat.Location = new System.Drawing.Point(163, 52);
+            this.btn_kameraKapat.Name = "btn_kameraKapat";
+            this.btn_kameraKapat.Size = new System.Drawing.Size(64, 23);
+            this.btn_kameraKapat.TabIndex = 4;
+            this.btn_kameraKapat.Text = " Kapat";
+            this.btn_kameraKapat.UseVisualStyleBackColor = true;
+            this.btn_kameraKapat.Click += new System.EventHandler(this.btn_kameraKapat_Click);
+            // 
+            // btn_kameraAc
+            // 
+            this.btn_kameraAc.Location = new System.Drawing.Point(93, 52);
+            this.btn_kameraAc.Name = "btn_kameraAc";
+            this.btn_kameraAc.Size = new System.Drawing.Size(64, 23);
+            this.btn_kameraAc.TabIndex = 3;
+            this.btn_kameraAc.Text = " Aç";
+            this.btn_kameraAc.UseVisualStyleBackColor = true;
+            this.btn_kameraAc.Click += new System.EventHandler(this.btn_kameraAc_Click);
+            // 
+            // lbl_urunisim
+            // 
+            this.lbl_urunisim.AutoSize = true;
+            this.lbl_urunisim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lbl_urunisim.Location = new System.Drawing.Point(129, 108);
+            this.lbl_urunisim.Name = "lbl_urunisim";
+            this.lbl_urunisim.Size = new System.Drawing.Size(71, 16);
+            this.lbl_urunisim.TabIndex = 1;
+            this.lbl_urunisim.Text = "Ürün İsim : ";
+            this.lbl_urunisim.Click += new System.EventHandler(this.lbl_urunisim_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(52, 108);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 16);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Ürün İsim : ";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(237, 84);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 16);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Barkod : ";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 21);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(81, 16);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Kamera Seç";
+            // 
+            // cmb_kameraac
+            // 
+            this.cmb_kameraac.FormattingEnabled = true;
+            this.cmb_kameraac.Location = new System.Drawing.Point(93, 21);
+            this.cmb_kameraac.Name = "cmb_kameraac";
+            this.cmb_kameraac.Size = new System.Drawing.Size(134, 24);
+            this.cmb_kameraac.TabIndex = 0;
+            // 
+            // pctbox_Kamera
+            // 
+            this.pctbox_Kamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctbox_Kamera.Location = new System.Drawing.Point(538, 12);
+            this.pctbox_Kamera.Name = "pctbox_Kamera";
+            this.pctbox_Kamera.Size = new System.Drawing.Size(265, 139);
+            this.pctbox_Kamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctbox_Kamera.TabIndex = 12;
+            this.pctbox_Kamera.TabStop = false;
             // 
             // grp_hesapmakinesi
             // 
@@ -372,13 +479,12 @@
             this.grp_hesapmakinesi.Controls.Add(this.btn_bir);
             this.grp_hesapmakinesi.Controls.Add(this.btn_iki);
             this.grp_hesapmakinesi.Controls.Add(this.txt_islem);
-            this.grp_hesapmakinesi.Location = new System.Drawing.Point(550, 160);
+            this.grp_hesapmakinesi.Location = new System.Drawing.Point(538, 160);
             this.grp_hesapmakinesi.Name = "grp_hesapmakinesi";
             this.grp_hesapmakinesi.Size = new System.Drawing.Size(283, 360);
-            this.grp_hesapmakinesi.TabIndex = 2;
+            this.grp_hesapmakinesi.TabIndex = 16;
             this.grp_hesapmakinesi.TabStop = false;
             this.grp_hesapmakinesi.Text = "Hesap Makinesi";
-            this.grp_hesapmakinesi.Enter += new System.EventHandler(this.grp_hesapmakinesi_Enter);
             // 
             // btn_geriGel
             // 
@@ -563,42 +669,48 @@
             // lbl_saniye
             // 
             this.lbl_saniye.AutoSize = true;
-            this.lbl_saniye.Location = new System.Drawing.Point(905, 10);
+            this.lbl_saniye.Location = new System.Drawing.Point(911, 12);
             this.lbl_saniye.Name = "lbl_saniye";
             this.lbl_saniye.Size = new System.Drawing.Size(47, 16);
-            this.lbl_saniye.TabIndex = 5;
+            this.lbl_saniye.TabIndex = 17;
             this.lbl_saniye.Text = "saniye";
             // 
             // lbl_dakika
             // 
             this.lbl_dakika.AutoSize = true;
-            this.lbl_dakika.Location = new System.Drawing.Point(855, 10);
+            this.lbl_dakika.Location = new System.Drawing.Point(861, 12);
             this.lbl_dakika.Name = "lbl_dakika";
             this.lbl_dakika.Size = new System.Drawing.Size(48, 16);
-            this.lbl_dakika.TabIndex = 6;
+            this.lbl_dakika.TabIndex = 18;
             this.lbl_dakika.Text = "dakika";
             // 
             // lbl_saat
             // 
             this.lbl_saat.AutoSize = true;
-            this.lbl_saat.Location = new System.Drawing.Point(816, 10);
+            this.lbl_saat.Location = new System.Drawing.Point(822, 12);
             this.lbl_saat.Name = "lbl_saat";
             this.lbl_saat.Size = new System.Drawing.Size(33, 16);
-            this.lbl_saat.TabIndex = 7;
+            this.lbl_saat.TabIndex = 19;
             this.lbl_saat.Text = "saat";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.btn_sut);
-            this.groupBox1.Controls.Add(this.btn_peynir);
-            this.groupBox1.Controls.Add(this.btn_tereyag);
-            this.groupBox1.Location = new System.Drawing.Point(161, 191);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btn_misir);
+            this.groupBox1.Controls.Add(this.btn_bezelye);
+            this.groupBox1.Controls.Add(this.btn_mercimek);
+            this.groupBox1.Controls.Add(this.btn_fasulye);
+            this.groupBox1.Location = new System.Drawing.Point(161, 186);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 305);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.Size = new System.Drawing.Size(371, 305);
+            this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürünler";
             // 
@@ -608,9 +720,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.Location = new System.Drawing.Point(269, 18);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 20);
+            this.label9.Size = new System.Drawing.Size(67, 20);
             this.label9.TabIndex = 1;
-            this.label9.Text = "30 TL";
+            this.label9.Text = "150 TL";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label13
@@ -619,10 +731,21 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.Location = new System.Drawing.Point(150, 18);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 20);
+            this.label13.Size = new System.Drawing.Size(57, 20);
             this.label13.TabIndex = 1;
-            this.label13.Text = "100 TL";
+            this.label13.Text = "60 TL";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(28, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "130 TL";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label14
             // 
@@ -632,184 +755,142 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(57, 20);
             this.label14.TabIndex = 1;
-            this.label14.Text = "50 TL";
+            this.label14.Text = "75 TL";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btn_sut
+            // btn_misir
             // 
-            this.btn_sut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_sut.ImageIndex = 2;
-            this.btn_sut.ImageList = this.SutList;
-            this.btn_sut.Location = new System.Drawing.Point(240, 41);
-            this.btn_sut.Name = "btn_sut";
-            this.btn_sut.Size = new System.Drawing.Size(114, 75);
-            this.btn_sut.TabIndex = 0;
-            this.btn_sut.UseVisualStyleBackColor = true;
+            this.btn_misir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_misir.ImageIndex = 3;
+            this.btn_misir.ImageList = this.EtList;
+            this.btn_misir.Location = new System.Drawing.Point(0, 147);
+            this.btn_misir.Name = "btn_misir";
+            this.btn_misir.Size = new System.Drawing.Size(114, 75);
+            this.btn_misir.TabIndex = 0;
+            this.btn_misir.UseVisualStyleBackColor = true;
             // 
-            // SutList
+            // btn_bezelye
             // 
-            this.SutList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("SutList.ImageStream")));
-            this.SutList.TransparentColor = System.Drawing.Color.Transparent;
-            this.SutList.Images.SetKeyName(0, "butter.ico.ico");
-            this.SutList.Images.SetKeyName(1, "cheese.ico.ico");
-            this.SutList.Images.SetKeyName(2, "milk.ico.ico");
+            this.btn_bezelye.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_bezelye.ImageIndex = 2;
+            this.btn_bezelye.ImageList = this.EtList;
+            this.btn_bezelye.Location = new System.Drawing.Point(240, 41);
+            this.btn_bezelye.Name = "btn_bezelye";
+            this.btn_bezelye.Size = new System.Drawing.Size(114, 75);
+            this.btn_bezelye.TabIndex = 0;
+            this.btn_bezelye.UseVisualStyleBackColor = true;
             // 
-            // btn_peynir
+            // btn_mercimek
             // 
-            this.btn_peynir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_peynir.ImageIndex = 1;
-            this.btn_peynir.ImageList = this.SutList;
-            this.btn_peynir.Location = new System.Drawing.Point(120, 41);
-            this.btn_peynir.Name = "btn_peynir";
-            this.btn_peynir.Size = new System.Drawing.Size(114, 75);
-            this.btn_peynir.TabIndex = 0;
-            this.btn_peynir.UseVisualStyleBackColor = true;
+            this.btn_mercimek.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_mercimek.ImageIndex = 1;
+            this.btn_mercimek.ImageList = this.EtList;
+            this.btn_mercimek.Location = new System.Drawing.Point(120, 41);
+            this.btn_mercimek.Name = "btn_mercimek";
+            this.btn_mercimek.Size = new System.Drawing.Size(114, 75);
+            this.btn_mercimek.TabIndex = 0;
+            this.btn_mercimek.UseVisualStyleBackColor = true;
             // 
-            // btn_tereyag
+            // btn_fasulye
             // 
-            this.btn_tereyag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_tereyag.ImageIndex = 0;
-            this.btn_tereyag.ImageList = this.SutList;
-            this.btn_tereyag.Location = new System.Drawing.Point(0, 41);
-            this.btn_tereyag.Name = "btn_tereyag";
-            this.btn_tereyag.Size = new System.Drawing.Size(114, 75);
-            this.btn_tereyag.TabIndex = 0;
-            this.btn_tereyag.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.btn_kameraKapat);
-            this.groupBox2.Controls.Add(this.btn_kameraAc);
-            this.groupBox2.Controls.Add(this.lbl_urunisim);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.cmb_kameraac);
-            this.groupBox2.Location = new System.Drawing.Point(161, 33);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(371, 152);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "QR kod ile barkod okut";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(240, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 22);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // btn_kameraKapat
-            // 
-            this.btn_kameraKapat.Location = new System.Drawing.Point(163, 52);
-            this.btn_kameraKapat.Name = "btn_kameraKapat";
-            this.btn_kameraKapat.Size = new System.Drawing.Size(64, 23);
-            this.btn_kameraKapat.TabIndex = 4;
-            this.btn_kameraKapat.Text = " Kapat";
-            this.btn_kameraKapat.UseVisualStyleBackColor = true;
-            this.btn_kameraKapat.Click += new System.EventHandler(this.btn_kameraKapat_Click);
-            // 
-            // btn_kameraAc
-            // 
-            this.btn_kameraAc.Location = new System.Drawing.Point(93, 52);
-            this.btn_kameraAc.Name = "btn_kameraAc";
-            this.btn_kameraAc.Size = new System.Drawing.Size(64, 23);
-            this.btn_kameraAc.TabIndex = 3;
-            this.btn_kameraAc.Text = " Aç";
-            this.btn_kameraAc.UseVisualStyleBackColor = true;
-            this.btn_kameraAc.Click += new System.EventHandler(this.btn_kameraAc_Click);
-            // 
-            // lbl_urunisim
-            // 
-            this.lbl_urunisim.AutoSize = true;
-            this.lbl_urunisim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_urunisim.Location = new System.Drawing.Point(129, 108);
-            this.lbl_urunisim.Name = "lbl_urunisim";
-            this.lbl_urunisim.Size = new System.Drawing.Size(71, 16);
-            this.lbl_urunisim.TabIndex = 1;
-            this.lbl_urunisim.Text = "Ürün İsim : ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(52, 108);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(71, 16);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Ürün İsim : ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(237, 84);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 16);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Barkod : ";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 21);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(81, 16);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Kamera Seç";
-            // 
-            // cmb_kameraac
-            // 
-            this.cmb_kameraac.FormattingEnabled = true;
-            this.cmb_kameraac.Location = new System.Drawing.Point(93, 21);
-            this.cmb_kameraac.Name = "cmb_kameraac";
-            this.cmb_kameraac.Size = new System.Drawing.Size(134, 24);
-            this.cmb_kameraac.TabIndex = 0;
-            // 
-            // pctbox_Kamera
-            // 
-            this.pctbox_Kamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pctbox_Kamera.Location = new System.Drawing.Point(545, 18);
-            this.pctbox_Kamera.Name = "pctbox_Kamera";
-            this.pctbox_Kamera.Size = new System.Drawing.Size(265, 139);
-            this.pctbox_Kamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctbox_Kamera.TabIndex = 10;
-            this.pctbox_Kamera.TabStop = false;
+            this.btn_fasulye.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_fasulye.ImageIndex = 0;
+            this.btn_fasulye.ImageList = this.EtList;
+            this.btn_fasulye.Location = new System.Drawing.Point(0, 41);
+            this.btn_fasulye.Name = "btn_fasulye";
+            this.btn_fasulye.Size = new System.Drawing.Size(114, 75);
+            this.btn_fasulye.TabIndex = 0;
+            this.btn_fasulye.UseVisualStyleBackColor = true;
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // SutUrunlerPanel
+            // EtList
+            // 
+            this.EtList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("EtList.ImageStream")));
+            this.EtList.TransparentColor = System.Drawing.Color.Transparent;
+            this.EtList.Images.SetKeyName(0, "chicken-leg.ico");
+            this.EtList.Images.SetKeyName(1, "fish.ico");
+            this.EtList.Images.SetKeyName(2, "lamb.ico");
+            this.EtList.Images.SetKeyName(3, "meat.ico");
+            this.EtList.Images.SetKeyName(4, "salami.ico");
+            this.EtList.Images.SetKeyName(5, "sausages.ico");
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.ImageIndex = 4;
+            this.button4.ImageList = this.EtList;
+            this.button4.Location = new System.Drawing.Point(120, 148);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 75);
+            this.button4.TabIndex = 0;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.ImageIndex = 5;
+            this.button5.ImageList = this.EtList;
+            this.button5.Location = new System.Drawing.Point(240, 147);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(114, 75);
+            this.button5.TabIndex = 0;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(150, 124);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 20);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "65 TL";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(269, 124);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 20);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "50 TL";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // EtUrunlerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(964, 521);
-            this.Controls.Add(this.pctbox_Kamera);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1024, 519);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_saniye);
             this.Controls.Add(this.lbl_dakika);
             this.Controls.Add(this.lbl_saat);
             this.Controls.Add(this.grp_hesapmakinesi);
+            this.Controls.Add(this.pctbox_Kamera);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grp_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "SutUrunlerPanel";
+            this.Name = "EtUrunlerPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SutUrunlerPanel";
-            this.Load += new System.EventHandler(this.SutUrunlerPanel_Load);
+            this.Text = "EtUrunler";
+            this.Load += new System.EventHandler(this.EtUrunlerPanel_Load);
             this.Click += new System.EventHandler(this.secilenTus);
             this.grp_menu.ResumeLayout(false);
             this.grp_urunler.ResumeLayout(false);
             this.grp_urunler.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbox_Kamera)).EndInit();
             this.grp_hesapmakinesi.ResumeLayout(false);
             this.grp_hesapmakinesi.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctbox_Kamera)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -818,12 +899,36 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grp_menu;
+        private System.Windows.Forms.GroupBox grp_urunler;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_portakal;
+        private System.Windows.Forms.Button btn_lahana;
+        private System.Windows.Forms.Button btn_cilek;
+        private System.Windows.Forms.Button btn_brokoli;
+        private System.Windows.Forms.Button btn_uzum;
+        private System.Windows.Forms.Button btn_muz;
+        private System.Windows.Forms.Button btn_elma;
         private System.Windows.Forms.Button btn_geri;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_et;
-        private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_kameraKapat;
+        private System.Windows.Forms.Button btn_kameraAc;
+        private System.Windows.Forms.Label lbl_urunisim;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmb_kameraac;
+        private System.Windows.Forms.PictureBox pctbox_Kamera;
         private System.Windows.Forms.GroupBox grp_hesapmakinesi;
         private System.Windows.Forms.Button btn_geriGel;
         private System.Windows.Forms.Button btn_sekiz;
@@ -846,39 +951,21 @@
         private System.Windows.Forms.Label lbl_saniye;
         private System.Windows.Forms.Label lbl_dakika;
         private System.Windows.Forms.Label lbl_saat;
-        private System.Windows.Forms.GroupBox grp_urunler;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_portakal;
-        private System.Windows.Forms.Button btn_lahana;
-        private System.Windows.Forms.Button btn_cilek;
-        private System.Windows.Forms.Button btn_brokoli;
-        private System.Windows.Forms.Button btn_uzum;
-        private System.Windows.Forms.Button btn_muz;
-        private System.Windows.Forms.Button btn_elma;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btn_sut;
-        private System.Windows.Forms.Button btn_peynir;
-        private System.Windows.Forms.Button btn_tereyag;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btn_kameraKapat;
-        private System.Windows.Forms.Button btn_kameraAc;
-        private System.Windows.Forms.Label lbl_urunisim;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cmb_kameraac;
-        private System.Windows.Forms.PictureBox pctbox_Kamera;
-        private System.Windows.Forms.ImageList SutList;
+        private System.Windows.Forms.Button btn_misir;
+        private System.Windows.Forms.Button btn_bezelye;
+        private System.Windows.Forms.Button btn_mercimek;
+        private System.Windows.Forms.Button btn_fasulye;
+        private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ImageList EtList;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
