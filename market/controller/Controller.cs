@@ -104,5 +104,14 @@ namespace market.controller
                 return LoginStatus.eksikParametre;
             }
         }
+
+        //-----------------------------------------------
+        public List<User> tumKullanicilariGetir()
+        {
+            Controller controller = new Controller();
+            return repository.tumKullanicilariGetir();
+        }
+
+
     }
 }

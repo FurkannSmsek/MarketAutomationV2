@@ -1,5 +1,6 @@
 
-﻿using System;
+using market.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace market
 {
     public partial class kullaniciPanel : Form
     {
+        controller.Controller controller = new controller.Controller();
         public kullaniciPanel()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace market
         private void kullaniciPanel_Load(object sender, EventArgs e)
         {
             defaultDegerleriDoldur();
+            tumKullanicilariDoldur();
         }
 
         private void defaultDegerleriDoldur()
@@ -59,6 +62,11 @@ namespace market
             combo_guvenlikSorusu.SelectedIndex = 0;
         }
 
+        private void tumKullanicilariDoldur()
+        {
+            List<User> userList = controller.tumKullanicilariGetir();
+            dataGridView1.DataSource = userList;
+        }
         private void groupBox1_Enter_1(object sender, EventArgs e)
         {
 
